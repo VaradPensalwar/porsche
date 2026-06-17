@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,22 @@
     <link rel="icon" type="image/png" href="images/Porsche.png">
 
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             background-color: #D2D2D2;
             background-image:
-            repeating-linear-gradient(
-                to right, transparent 0 100px,
-                #25283b22 100px 101px
-            ),
-            repeating-linear-gradient(
-                to bottom, transparent 0 100px,
-                #25283b22 100px 101px
-            );
+                repeating-linear-gradient(to right, transparent 0 100px,
+                    #25283b22 100px 101px),
+                repeating-linear-gradient(to bottom, transparent 0 100px,
+                    #25283b22 100px 101px);
         }
-        
-        body::before{
+
+        body::before {
             position: absolute;
             width: min(1400px, 90vw);
             top: 10%;
@@ -42,6 +40,7 @@
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="banner">
@@ -99,16 +98,16 @@
         </div>
         <div class="content">
             <h1 data-content="Porsche">
-                Porsche 
+                Porsche
             </h1>
             <div class="author">
                 <h2>911</h2>
                 <p><b>GT3 RS</b></p>
-                
+
             </div>
             <div class="model"></div>
         </div>
-        
+
         <!-- <div class="navigation">
             <button class="prev">&lt;</button>
             <button class="next">&gt;</button>
@@ -117,7 +116,7 @@
 
     <script>
         // JavaScript for manual slider control
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const slider = document.querySelector('.slider');
             const items = document.querySelectorAll('.item');
             const prevBtn = document.querySelector('.prev');
@@ -149,26 +148,28 @@
             // Initialize auto play
             startAutoPlay();
 
-            // Move to previous image
-            prevBtn.addEventListener('click', function() {
-                stopAutoPlay();
-                currentRotation -= 36; // 360 / 10 items = 36 degrees per item
-                updateSliderRotation();
-            });
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function () {
+                    stopAutoPlay();
+                    currentRotation -= 36;
+                    updateSliderRotation();
+                });
+            }
 
-            // Move to next image
-            nextBtn.addEventListener('click', function() {
-                stopAutoPlay();
-                currentRotation += 36; // 360 / 10 items = 36 degrees per item
-                updateSliderRotation();
-            });
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function () {
+                    stopAutoPlay();
+                    currentRotation += 36;
+                    updateSliderRotation();
+                });
+            }
 
             // Allow user to drag the slider
             let isDragging = false;
             let startX;
             let startRotation;
 
-            slider.addEventListener('mousedown', function(e) {
+            slider.addEventListener('mousedown', function (e) {
                 isDragging = true;
                 startX = e.clientX;
                 startRotation = currentRotation;
@@ -176,14 +177,14 @@
                 slider.style.cursor = 'grabbing';
             });
 
-            document.addEventListener('mousemove', function(e) {
+            document.addEventListener('mousemove', function (e) {
                 if (!isDragging) return;
                 const dx = e.clientX - startX;
                 currentRotation = startRotation + dx / 2; // Adjust sensitivity
                 updateSliderRotation();
             });
 
-            document.addEventListener('mouseup', function() {
+            document.addEventListener('mouseup', function () {
                 if (isDragging) {
                     isDragging = false;
                     slider.style.cursor = 'grab';
@@ -191,21 +192,21 @@
             });
 
             // Touch events for mobile
-            slider.addEventListener('touchstart', function(e) {
+            slider.addEventListener('touchstart', function (e) {
                 isDragging = true;
                 startX = e.touches[0].clientX;
                 startRotation = currentRotation;
                 stopAutoPlay();
             });
 
-            document.addEventListener('touchmove', function(e) {
+            document.addEventListener('touchmove', function (e) {
                 if (!isDragging) return;
                 const dx = e.touches[0].clientX - startX;
                 currentRotation = startRotation + dx / 2; // Adjust sensitivity
                 updateSliderRotation();
             });
 
-            document.addEventListener('touchend', function() {
+            document.addEventListener('touchend', function () {
                 isDragging = false;
             });
 
@@ -214,4 +215,5 @@
         });
     </script>
 </body>
+
 </html>
