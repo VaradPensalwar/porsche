@@ -1,65 +1,81 @@
 ````md
+<div align="center">
+
 # Porsche 911 GT3 RS
 
-A modern landing page inspired by the **Porsche 911 GT3 RS**, featuring an interactive 3D rotating video carousel built with **HTML**, **CSS**, and **Vanilla JavaScript**. The project showcases responsive design, smooth animations, and an immersive user experience without relying on external JavaScript frameworks.
+*A cinematic 3D web experience inspired by the iconic Porsche 911 GT3 RS.*
 
-**Live Demo:** https://porsche-911-gt3-rs.vercel.app/
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/d3dc63f1-a594-411b-bd07-bb9f48916926" alt="Project Preview" width="320">
+<p>
+  <a href="https://porsche-911-gt3-rs.vercel.app/"><strong>🌐 Live Demo</strong></a>
 </p>
 
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Responsive-✔-2ea44f?style=for-the-badge">
+</p>
+
+<img src="https://github.com/user-attachments/assets/d3dc63f1-a594-411b-bd07-bb9f48916926" width="330" alt="Project Preview"/>
+
+</div>
+
 ---
 
-## Features
+## ✨ Overview
+
+This project recreates the spirit of the **Porsche 911 GT3 RS** through a modern web experience. It features a fully responsive landing page with a **3D rotating video carousel**, smooth animations, and interactive controls built entirely with **HTML, CSS, and Vanilla JavaScript**.
+
+---
+
+## 🚀 Features
 
 - Interactive 3D rotating video carousel
-- Automatic carousel rotation
+- Smooth automatic rotation
 - Mouse drag interaction
 - Touch gesture support for mobile devices
-- Responsive design for desktop, tablet, and mobile
-- Pure HTML, CSS, and Vanilla JavaScript
+- Responsive layout for desktop, tablet, and mobile
+- Lightweight implementation with no JavaScript frameworks
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
-| HTML5 | Page structure |
-| CSS3 | Styling, animations, and responsive layout |
-| JavaScript (ES6) | Carousel interaction and controls |
-| Vercel | Deployment |
+| **HTML5** | Page structure |
+| **CSS3** | Styling, animations, and responsive design |
+| **JavaScript (ES6)** | Carousel logic and interactions |
+| **Vercel** | Deployment |
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
-.
+Porsche/
+│
 ├── images/
 ├── videos/
 ├── index.html
 ├── style.css
 └── README.md
-````
+```
 
 ---
 
-## Getting Started
+## ⚙️ Getting Started
 
-### Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/varadpensalwar/Porsche.git
 cd Porsche
 ```
 
-### Run locally
+Run locally using any static server.
 
-Since this is a static website, simply open `index.html` in your browser.
-
-Or start a local development server:
+Example:
 
 ```bash
 python -m http.server
@@ -67,54 +83,58 @@ python -m http.server
 
 Then open:
 
-```
+```text
 http://localhost:8000
 ```
 
----
-
-## Contributing
-
-Contributions are welcome.
-
-1. Fork the repository.
-2. Create a feature branch.
-
-```bash
-git checkout -b feature/your-feature
-```
-
-3. Commit your changes.
-
-```bash
-git commit -m "Add your feature"
-```
-
-4. Push your branch.
-
-```bash
-git push origin feature/your-feature
-```
-
-5. Open a Pull Request.
+Or simply open **index.html** directly in your browser.
 
 ---
 
-## License
+## 📱 Responsive Design
 
-This project does not currently include a license.
+The interface is optimized for:
+
+- 💻 Desktop
+- 📱 Mobile
+- 📟 Tablet
+
+Responsive styling adjusts typography, carousel dimensions, spacing, and background assets across different screen sizes.
 
 ---
 
-## Author
+## 🤝 Contributing
+
+Contributions are always welcome.
+
+```bash
+# Fork the repository
+
+# Create a feature branch
+git checkout -b feature/amazing-feature
+
+# Commit changes
+git commit -m "Add amazing feature"
+
+# Push branch
+git push origin feature/amazing-feature
+```
+
+Finally, open a Pull Request.
+
+---
+
+## 👨‍💻 Author
 
 **Varad Pensalwar**
 
-* GitHub: https://github.com/varadpensalwar
+- GitHub: https://github.com/varadpensalwar
 
 ---
 
-If you found this project helpful, consider giving it a ⭐ on GitHub.
+<div align="center">
 
-```
-```
+⭐ If you enjoyed this project, consider giving it a star.
+
+</div>
+````
