@@ -1,4 +1,4 @@
-````md
+
 <div align="center">
 
 # Porsche 911 GT3 RS
@@ -137,4 +137,3 @@ Finally, open a Pull Request.
 ⭐ If you enjoyed this project, consider giving it a star.
 
 </div>
-````
