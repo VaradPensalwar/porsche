@@ -1,5 +1,5 @@
 
-<div align="center">
+<div>
 
 # Porsche 911 GT3 RS
 
