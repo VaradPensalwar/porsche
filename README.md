@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
   <img src="https://img.shields.io/badge/Responsive-✔-2ea44f?style=for-the-badge">
 </p>
-
+<p>📸 Preview</p>
 <img src="https://github.com/user-attachments/assets/d3dc63f1-a594-411b-bd07-bb9f48916926" width="330" alt="Project Preview"/>
 
 </div>
