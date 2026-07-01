@@ -132,11 +132,16 @@
 
             // Start auto rotation
             function startAutoPlay() {
+                clearInterval(autoPlayInterval);
+
                 autoPlayInterval = setInterval(() => {
                     currentRotation += 1;
-                    if (currentRotation >= 360) currentRotation = 0;
+
+                    if (currentRotation >= 360)
+                        currentRotation = 0;
+
                     updateSliderRotation();
-                }, 55); // Adjusted for smoother rotation
+                }, 55);
             }
 
             // Stop auto rotation
@@ -188,6 +193,8 @@
                 if (isDragging) {
                     isDragging = false;
                     slider.style.cursor = 'grab';
+
+                    startAutoPlay();
                 }
             });
 
@@ -202,12 +209,13 @@
             document.addEventListener('touchmove', function (e) {
                 if (!isDragging) return;
                 const dx = e.touches[0].clientX - startX;
-                currentRotation = startRotation + dx / 2; // Adjust sensitivity
+                currentRotation = startRotation + dx / 2;
                 updateSliderRotation();
             });
 
             document.addEventListener('touchend', function () {
                 isDragging = false;
+                startAutoPlay();
             });
 
             // Make slider interactive
