@@ -123,3 +123,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Make slider interactive
   slider.style.cursor = "grab";
 });
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
