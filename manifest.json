@@ -1,33 +1,35 @@
 {
-  "short_name": "Porsche 911 GT3 RS",
+  "id": "/",
   "name": "Porsche 911 GT3 RS",
-  "icons": [
-    {
-      "src": "images/1.png",
-      "sizes": "64x64",
-      "type": "image/png"
-    },
-    {
-      "src": "images/2.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "images/3.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
+  "short_name": "Porsche",
+  "description": "Experience the Porsche 911 GT3 RS in an immersive 3D PWA.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "theme_color": "#000000",
   "background_color": "#000000",
-  "orientation": "portrait",
+
+  "icons": [
+    {
+      "src": "/images/2.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/3.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+
   "screenshots": [
     {
-      "src":"images/Screenshot1.jpg",
-      "sizes": "1080x2400",  
-      "type": "image/jpg",
+      "src": "/images/Screenshot1.jpg",
+      "sizes": "1080x2400",
+      "type": "image/jpeg",
       "form_factor": "narrow"
     }
   ]
