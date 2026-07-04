@@ -1,5 +1,5 @@
 // public/service-worker.js
-const CACHE_NAME = "nehaavashisht-cache-v1";
+const CACHE_NAME = "porsche-cache-v1";
 const urlsToCache = [
   "./",
   "./index.html",
