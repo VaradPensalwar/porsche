@@ -18,5 +18,5 @@ jobs:
         run: |
           git config --global user.email "varadpensalwar@gmail.com"
           git config --global user.name "Varad Pensalwar"
-          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/varadpensalwar/Porsche.git
+          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/VaradPensalwar/Porsche.git
           git push gitlab main --force
