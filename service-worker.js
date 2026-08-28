@@ -1,27 +1,26 @@
-// public/service-worker.js
 const CACHE_NAME = "porsche-cache-v1";
 const urlsToCache = [
-  "./",
-  "./index.html",
-  "./style.css",
-  "./manifest.json",
-  "./images/1.png",
-  "./images/2.png",
-  "./images/3.png",
-  "./images/Porsche_911_GT3_RS_1.jpg",
-  "./images/Porsche_911_GT3_RS_2.jpg",
-  "./images/Porsche_911_GT3_RS_3.jpg",
-  "./images/Porsche_911_GT3_RS_4.jpeg",
-  "./images/Porsche_911_GT3_RS_5.jpg",
-  "./images/Porsche_911_GT3_RS_6.jpg",
-  "./images/Porsche_911_GT3_RS_7.jpg",
-  "./images/Porsche_911_GT3_RS_8.jpg",
-  "./images/Porsche_911_GT3_RS_9.jpg",
-  "./images/Porsche_911_GT3_RS_10.jpg",
-  "./images/Porsche_911_GT3_RS_11.jpg",
-  "./images/Porsche_911_GT3_RS_12.jpg",
-  "./images/Porsche_911_GT3_RS_FOR_MOBILE.png",
-  "./images/bg.png",
+  "/",
+  "/index.html",
+  "/style.css",
+  "/script.js",
+  "/manifest.json",
+  "/images/icon-192.png",
+  "/images/icon-512.png",
+  "/images/Porsche_911_GT3_RS_1.jpg",
+  "/images/Porsche_911_GT3_RS_2.jpg",
+  "/images/Porsche_911_GT3_RS_3.jpg",
+  "/images/Porsche_911_GT3_RS_4.jpeg",
+  "/images/Porsche_911_GT3_RS_5.jpg",
+  "/images/Porsche_911_GT3_RS_6.jpg",
+  "/images/Porsche_911_GT3_RS_7.jpg",
+  "/images/Porsche_911_GT3_RS_8.jpg",
+  "/images/Porsche_911_GT3_RS_9.jpg",
+  "/images/Porsche_911_GT3_RS_10.jpg",
+  "/images/Porsche_911_GT3_RS_11.jpg",
+  "/images/Porsche_911_GT3_RS_12.jpg",
+  "/images/Porsche_911_GT3_RS_FOR_MOBILE.png",
+  "/images/bg.png",
 ];
 
 // Install a service worker
@@ -32,6 +31,7 @@ self.addEventListener("install", (event) => {
       return cache.addAll(urlsToCache);
     }),
   );
+  self.skipWaiting();
 });
 
 // Cache and return requests
@@ -76,6 +76,12 @@ self.addEventListener("activate", (event) => {
           return null;
         }),
       );
-    }),
+    }).then(() => self.clients.claim()),
   );
+});
+
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });
